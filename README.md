@@ -1,16 +1,43 @@
-# React + Vite
+# TechSol Website - Frontend Repository
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome to the frontend repository for **TechSol**, an IT solutions company helping startups, SMEs, and enterprises build, scale, and automate with reliable, modern, and cost-effective technology solutions.
 
-Currently, two official plugins are available:
+## Overview
+This repository contains the source code for the TechSol landing page and main website interface. It is built using:
+- **React 18** (with React Hooks)
+- **TypeScript**
+- **Vite** (for fast local development and optimized production builds)
+- **Vanilla CSS** (with CSS variables for theming)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/en/) (v16+ recommended)
+- [pnpm](https://pnpm.io/) (used for package management)
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
 
-## Expanding the Oxlint configuration
+2. **Start the development server:**
+   ```bash
+   pnpm run dev
+   ```
+   The site will be available locally at `http://localhost:3206/`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+3. **Build for production:**
+   ```bash
+   pnpm run build
+   ```
+   This will generate an optimized build in the `dist/` directory.
+
+## Project Structure
+- `src/components/`: Modular React components (Hero, Navbar, Stats, Services, Portfolio, etc.)
+- `src/App.tsx`: Main application entry and layout assembly
+- `src/index.css`: Global styles and CSS variable definitions (colors, fonts, etc.)
+- `public/`: Static assets (favicon, images, etc.)
+
+## Deployment
+This static site is ready to be deployed to platforms like Vercel, Netlify, or GitHub Pages. Just set the build command to `pnpm run build` and the publish directory to `dist`.
