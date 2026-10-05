@@ -1,0 +1,44 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1c20"/>
+      <stop offset="100%" stop-color="#0a0a0c"/>
+    </linearGradient>
+    <radialGradient id="glowTopRight" cx="90%" cy="10%" r="70%">
+      <stop offset="0%" stop-color="#ff7f00" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff7f00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBottomLeft" cx="10%" cy="90%" r="70%">
+      <stop offset="0%" stop-color="#ff7f00" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff7f00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffb000"/>
+      <stop offset="100%" stop-color="#ff4400"/>
+    </linearGradient>
+    <linearGradient id="bulbTopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb000"/>
+      <stop offset="100%" stop-color="#ff4400"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100" height="100" rx="22" fill="url(#bgGrad)"/>
+  <rect width="100" height="100" rx="22" fill="url(#glowTopRight)"/>
+  <rect width="100" height="100" rx="22" fill="url(#glowBottomLeft)"/>
+
+  <!-- Bulb Outer Arc (Top Orange) -->
+  <path d="M 24 47 A 26 26 0 0 1 76 47" fill="none" stroke="url(#bulbTopGrad)" stroke-width="9" stroke-linecap="butt"/>
+
+  <!-- Bulb Lower Left (White) -->
+  <path d="M 24 47 C 24 62, 40 62, 40 70" fill="none" stroke="#fffaee" stroke-width="9" stroke-linecap="round"/>
+  
+  <!-- Bulb Lower Right (White) -->
+  <path d="M 76 47 C 76 62, 60 62, 60 70" fill="none" stroke="#fffaee" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- T character -->
+  <path d="M 36 40 h 28 v 7 h -10.5 v 21 h -7 v -21 h -10.5 z" fill="url(#tGrad)"/>
+
+  <!-- Bulb Base pills -->
+  <rect x="40" y="75" width="20" height="6" rx="3" fill="#fffaee"/>
+  <rect x="43" y="84" width="14" height="6" rx="3" fill="#fffaee"/>
+</svg>

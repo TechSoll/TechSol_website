@@ -1,0 +1,99 @@
+.hero { padding-top: 120px; padding-bottom: 80px; position: relative; }
+.hero-leaves { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 180px; z-index: 0; pointer-events: none; }
+.hero-leaves svg { width: 100%; height: auto; }
+.hero-inner { display: flex; align-items: center; gap: 60px; position: relative; z-index: 1; }
+.hero-content { flex: 1; max-width: 650px; position: relative; z-index: 2; }
+.hero-desc { margin: 24px 0 32px; font-size: 1.05rem; max-width: 540px; }
+.hero-actions { display: flex; gap: 16px; margin-bottom: 40px; }
+.hero-clients { display: flex; align-items: center; gap: 16px; margin-top: 10px; }
+.avatar-group { display: flex; }
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-gray);
+  border: 2px solid #fff;
+  margin-left: -12px;
+  background-image: url('https://i.pravatar.cc/100?img=3');
+  background-size: cover;
+}
+.avatar:nth-child(1) { margin-left: 0; background-image: url('https://i.pravatar.cc/100?img=1'); }
+.avatar:nth-child(2) { background-image: url('https://i.pravatar.cc/100?img=2'); }
+.avatar:nth-child(4) { background-image: url('https://i.pravatar.cc/100?img=4'); }
+.avatar:nth-child(5) { background-image: url('https://i.pravatar.cc/100?img=5'); }
+
+.hero-image-wrapper { flex: 1; position: relative; border-radius: var(--radius-lg); display: flex; justify-content: center; align-items: center; }
+.hero-image { width: 110%; max-width: none; border-radius: var(--radius-lg); transform: translateX(5%); z-index: 2; position: relative; }
+
+.hero-bg-circle {
+  position: absolute;
+  top: -10%;
+  right: 10%;
+  width: 90%;
+  padding-bottom: 90%;
+  background: #e9f0e6;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.floating-text-left {
+  position: absolute;
+  left: -80px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.floating-text-right {
+  position: absolute;
+  right: -40px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+}
+.hand-text {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* fallback for handwritten */
+  font-size: 1.1rem;
+  color: var(--brand-green);
+  transform: rotate(-10deg);
+}
+.floating-text-right .hand-text { transform: rotate(10deg); }
+
+@media (max-width: 1200px) {
+  .floating-text-left, .floating-text-right { display: none; }
+}
+.floating-card {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 240px;
+}
+.floating-card-icon {
+  width: 40px;
+  height: 40px;
+  background: #fdf0e7;
+  color: var(--brand-orange);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.floating-card-text { font-size: 0.8rem; line-height: 1.3; }
+
+@media (max-width: 992px) {
+  .hero-inner { flex-direction: column; }
+  .floating-card { right: 20px; }
+}
