@@ -7,5 +7,13 @@ export default defineConfig({
   server: {
     port: 3206,
     strictPort: true,
+    proxy: {
+      '/api/datetime': {
+        target: 'https://python-app-vwnm.onrender.com',
+        changeOrigin: true,
+        rewrite: () => '/datetime',
+        secure: true,
+      },
+    },
   },
 })

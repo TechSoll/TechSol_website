@@ -6,6 +6,7 @@ import Services from './components/Services/Services'
 import Portfolio from './components/Portfolio/Portfolio'
 import Testimonials from './components/Testimonials/Testimonials'
 import Footer from './components/Footer/Footer'
+import Clock from './components/Clock/Clock'
 import './App.css'
 
 const App: React.FC = () => (
@@ -19,6 +20,7 @@ const App: React.FC = () => (
       <Testimonials />
     </main>
     <Footer />
+    <Clock />
   </>
 )
 
