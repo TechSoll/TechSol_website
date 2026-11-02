@@ -33,7 +33,7 @@ const Clock: React.FC = () => {
   const fetchDateTime = useCallback(async () => {
     try {
       const response = await axios.get<DateTimeResponse>(
-        '/api/datetime'
+        'https://python-app-vwnm.onrender.com/datetime'
       )
       setTimeData(response.data)
       setDisplayTime(new Date(response.data.server.utc.datetime))
